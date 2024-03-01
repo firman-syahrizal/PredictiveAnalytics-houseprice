@@ -2,31 +2,27 @@
 
 ## Domain Proyek
 
-Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+Prediksi harga rumah memiliki peranan yang penting dalam penentuan kebijakan real estate nasional [[1](https://www.sciencedirect.com/science/article/abs/pii/S0957417423014835)]. 
 
-Prediksi harga rumah menjadi hal yang penting sekarang ini, terlebih bagi beberapa pemangku kepentigan seperti calon pembeli rumah, agen penjualan rumah, pengembang dan investor, maupun lembaga keuangan yang memberikan pinjaman dana kepada pembeli rumah.
+Prediksi harga rumah menjadi hal yang penting sekarang ini, terlebih bagi beberapa pemangku kepentigan seperti pemiliki rumah, agen penjualan rumah, maupun lembaga pembuat kebijakan [[2](https://www.sciencedirect.com/science/article/abs/pii/S2214579622000491)]. 
 
-Seiring dengan berkembangnya teknologi, saat ini terdapat model machine learning yang dapat digunakan untuk memprediksi harga rumah. Model machine learning regresi menjadi pilihan yang tepat sebagai solusi dalam prediksi harga rumah. Harga rumah yang ditentukan oleh banyak faktor baik faktor bertipe numerik maupun nonnumerik dapat diakomodasi oleh model regresi.
+Analisis pasar real estate menarik perhatian peneliti maupun praktisi [[3](https://www.sciencedirect.com/science/article/pii/S014829632200039X)].
 
+Seiring dengan berkembangnya teknologi, saat ini terdapat model machine learning yang dapat digunakan untuk memprediksi harga rumah. Model machine learning regresi menjadi pilihan yang tepat sebagai solusi dalam prediksi harga rumah. Harga rumah yang ditentukan oleh banyak faktor baik faktor seperti lokasi, kota, dan populasi [[4](https://www.sciencedirect.com/science/article/pii/S1877050922001016)]. 
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-  
-  Format Referensi: [Judul Referensi](https://scholar.google.com/) 
+Perkembangan model dalam prediksi harga rumah  dapat ditingkatkan akurasinya dengan teknik PCA [[5](https://www.researchgate.net/publication/366979465_Real-estate_price_prediction_with_deep_neural_network_and_principal_component_analysis)]. 
+
 
 ## Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
+Berdasar latar belakang yang ada dapat disimpulkan jika pembuatan model machine learning untuk prediksi harga rumah dapat membantu banyak pihak lebih bijak dalam mengambil keputusan. Sekarang ini, jumlah data terkait jual beli rumah sudah banyak, pemanfaatan machine learning tentunya cocok diterapkan dalam mupaya mengekstrak informasi berdasar data yang besar.
 
 ### Problem Statements
 
-Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+Berdasarkondisi yang telah diuraikan sebelumnya, akan dikembangkan model machine learning prediksi harga rumah dengan tujuan menyelesaikan permasalahan berikut:
+- Dari berbagai variabel independen yang ada, variabel apa yang paling berpengaruh terhadap harga (variabel dependen) ?
+- Bagaimana cara memanfaatkan dataset harga rumah untuk membuat model prediksinya menggunakan machine learning ?
+- Bagaimana cara menentukan model prediksi harga yang baik ?
 
 ### Goals
 
