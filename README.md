@@ -63,7 +63,7 @@ Berikut merupakan kondisi data yang digunakan:
 - Baik analisis univariat maupun multivariat keduanya dibedakan menjadi dua, fitur kategori dan numerik.
 - Penggunaan visualisasi dengan gambar dipilih karena dapat menyajikan data dalam format yang lebih informatif.
 - Teknik visualisasi data dalam bentuk histogram untuk analisis univariat. Sedangkan pada analisis multivariat menggunakan catplot, pairplot, dan heatmap.
-    - Histogram digunakan untuk menampilkan persebaran data.
+    - histogram digunakan untuk menampilkan persebaran data.
     - catplot digunakan untuk visualisasi fitur kategori.
     - pairplot digunakan untuk visualisasi hubungan dua fitur dengan bentuk scatter.
     - heatmap digunakan untuk menampilkan correlation matrix.
