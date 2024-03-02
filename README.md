@@ -300,7 +300,11 @@ Dari tahap evaluasi dapat disimpulkan jika terdapat dua model yang memiliki perf
 ## Referensi
 
 [1] C. Zhan, Y. Liu, Z. Wu, M. Zhao, dan T. W. S. Chow, “A hybrid machine learning framework for forecasting house price,” Expert Systems with Applications, vol. 233. Elsevier BV, hlm. 120981, Des 2023. doi: 10.1016/j.eswa.2023.120981. 
+
 [2] A. Karamanou, E. Kalampokis, dan K. Tarabanis, “Linked Open Government Data to Predict and Explain House Prices: The Case of Scottish Statistics Portal,” Big Data Research, vol. 30. Elsevier BV, hlm. 100355, Nov 2022. doi: 10.1016/j.bdr.2022.100355.
+
 [3] T. Potrawa dan A. Tetereva, “How much is the view from the window worth? Machine learning-driven hedonic pricing model of the real estate market,” Journal of Business Research, vol. 144. Elsevier BV, hlm. 50–65, Mei 2022. doi: 10.1016/j.jbusres.2022.01.027. 
+
 [4] A. B. Adetunji, O. N. Akande, F. A. Ajala, O. Oyewo, Y. F. Akande, dan G. Oluwadara, “House Price Prediction using Random Forest Machine Learning Technique,” Procedia Computer Science, vol. 199. Elsevier BV, hlm. 806–813, 2022. doi: 10.1016/j.procs.2022.01.100. 
+
 [5] F. Mostofi, V. Toğan, dan H. B. Başağa, “Real-estate price prediction with deep neural network and principal component analysis,” Organization, Technology and Management in Construction: an International Journal, vol. 14, no. 1. Walter de Gruyter GmbH, hlm. 2741–2759, Jan 01, 2022. doi: 10.2478/otmcj-2022-0016. 
