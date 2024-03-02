@@ -176,12 +176,62 @@ Jika dilihat terdapat kolom yang memiliki relasi yang tinggi yaitu *rooms, bedro
 
 
 ## Modeling
-Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
+Pada tahap ini akan dibuat lima model *machine learning* yang nantinya akan di cek model mana yang terbaik pada tahap evaluasi. Kelima model tersebut yaitu
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
+* Linear Regression
+* K-Nearest Neighbor
+* Random Forest (Bagging Algoritm)
+* Boosting
+* Support Vector Regression
+
+#### 1. **Model Lienear Regressi**
+Model Liear Regression merupakan algoritma yang bertujuan mencari *best-fitting straight line* melewati suatu set datapoint. Garis ini merepresentasikan hubungan linear antara satu atau lebih fitur (variabel independen) dan *single continous output variable* (variabel dependen).
+
+Model Linear Regression dipilih karena mudah difahami, efisien dalam pelatihan dan uji, serta model ini cocok digunakan sebagai awalan membuat model *machine learning*. Sayangnya model ini menggunakan asumsi linear antar fitur terhadap variabel target.
+
+#### 2. **Model K-Nearest Neighbor**
+Model K-Nearest Neighbor atau yang dikenal sebagai KNN merupakan algoritma yang sederhana dibandingkan algoritma lain. Karena kesederhanaannya, maka model ini cocok digunakan untuk membuat model pertama sebelum mencoba model lain.
+Algoritma KNN sendiri menggunakan 'kesamaan fitur' untuk memprediksi nilai terhadap *input*-an data baru. Data baru ini akan dinilai kemiripannya terhadap data set pelatihan.
+KKN bekerja dengan membandingkan jarak satu sampel ke sampel pelatihan lain dengan memilih sejumlah K *nearest neighbor*. KNN sendiri dapat digunakan pada model klasifikasi dan regresi.
+
+Parameter yang diatur adalah n_neighbors yaitu jumlah tetangga terdekat yang digunakan.
+
+Keunggulannya adalah model ini termasuk simpel sehingga mudah difahami, sifatnya yang nonparametric membuatnya tetap cocok digunakan pada data yang standar distribusinya kurang baik. Kekurangannya adalah prosesnya yang lambat, performanya dapat meurun ketika banyak fitur, dan sensitif terhadap outlier.
+
+#### 3. **Model Random Forest**
+Random Forest termasuk dalam algoritma *supervised learning* yang dapat digunakan untuk menyelesaikan permasalahan klasifikasi maupun regresi.
+Random Forest masuk kedalam kategori *ensamble (group) learning*. Model enseamble merupakan model prediksi yang dibentuk dari beberapa model dan bekerja secara bersama-sama. Setiap model membuat prediksi secara independen yang nantinya semua predisksi ini digabung untuk membuat keputusan akhir.
+Random Forest pada dasarnya merupakan versi bagging dari algoritma dari decision tree. Dan, bagging adalah teknik melatih model dengan sampel acak.
+
+Parameter yang diatur:
+- n_estimator, jumlah decision trees yang digunakan
+- max_depth, jumlah maksimal berapa banyak decicion tree dapat membelah
+- random_State, mengatur random generator
+- n_jobs, berapa banyak pekerjaan dapat diselesaikan dalam satu waktu
+
+Keunggulan dari algoritma ini karena kekaurasiannya yang tinggi, bekerja optimal terhadap outlier, dan mampu menagani data dengan banyak fitur. Kelemahan dari model ini sumber daya yang digunakan tinggi dan terkadang tidak mudah untuk memahami *exact logic* dari hasil prediksinya.
+
+#### 4. **Model Boosting**
+Sama seperti teknik bagging, algoritma boosting juga dipakai pada model ensembel (terdiri dari beberapa model yang bekerja secara bersama-sama). Jika pada teknik bagging model dilatih secara paralel, bedanya pada model boosting, model dilatih secara berurutan (iteratif).
+Model yang dibangun berikutnya merupakan model yang bertugas memperbaiki kesalahan dari model sebelumnya. Tujuan dari model ini adalah memanfaatkan model sederhana (yang dianggap lemah) untuk membentuk model yang kuat.
+
+Parameter yang diatur:
+- learning rate, kontrol kontribusi setiap pohon
+- random_state, mengatur random generator
+
+Model ini dipilih karena dapat memerikan hasil yang lebih akurat dibanding *indivisual weaker leaner*, tetap bekerja baik pada data dengan noise dan outlier, dan mampu mengatasi missing value. Sayangnya metode ini juga memiliki kelemahan pada intrepretasi hasil prediksi yang mungkin *exact logic*-nya tidak mudah difahami dan terkadang dapat mengalami overfitting.
+
+#### 5. **Model Support Vector Regression**
+SVR merupakan adaptasi dari algoritma *Support Vector Machine* (SVM) untuk kasus regresi. Ide utama dari SVR adalah mencari hyperplane (*or decision boundary*) yang fit terhadap titik-titik data sebanyak mungkin dengan suatu batas toleransi tertentu.
+
+parameter yang diatur:
+-c, mengatur nilai kompleksitas dan margin
+-epsilon, ukuran margin diamana tidak ada penalti atas kesalahan yang dilakukan
+
+Jika pada model pertama data diasumsikan berbentuk linear, disini data nonlinear dapat dimodelkan lebih baik. Selain itu model ini juga dapat mengatasi interaksi antar fitur yang kompleks. Selain itu model ini juga tetap optimal pada data dengan outlier, dan mampu bekerja dengan baik pada data dengan banyak fitur. Sayangnya model ini bisa saja memberi prediksi yang sulit diinterpretasikan.
+
+**Model yang dipilih**
+Nantiya kelima model ini akan dievaluasi performanya menggunakan tiga metric. Melalui tiga metric ini dapat dipilih model yang memberikan hasil terbaik.
 
 ## Evaluation
 Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
