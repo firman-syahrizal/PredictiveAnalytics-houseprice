@@ -38,7 +38,7 @@ Dibuat model predictive machine learning dengan tujuan:
     - Metric yang dapat dipakai untuk evaluasi model diantaranya MSE, MAE, dan RMSE.
 
 ## Data Understanding
-Data yang digunakan adalah data California Housing Prices yang dapat ditemukan pada [Kaggle](https://www.kaggle.com/datasets/camnugent/california-housing-prices/data).
+Data yang digunakan adalah data California Housing Prices yang dapat ditemukan pada laman : https://www.kaggle.com/datasets/camnugent/california-housing-prices/data .
 Berikut merupakan kondisi data yang digunakan:
 - Dataset merupakan data dengan format CSV.
 - Dataset terdiri dari 20640 sampel.
@@ -234,15 +234,72 @@ Jika pada model pertama data diasumsikan berbentuk linear, disini data nonlinear
 Nantiya kelima model ini akan dievaluasi performanya menggunakan tiga metric. Melalui tiga metric ini dapat dipilih model yang memberikan hasil terbaik.
 
 ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
+Evaluasi terhadap model yang telah dibuat merupakan langkah yang penting untuk menentukan performa model dalam memprediksi data. Salah stu cara untuk mengevaluasi model dengan menggunakan metric. terdapat tiga metric yang umum digunakan untuk mengukur seberapa besar perbedaan antara hasi prediksi model dengan data aktual. Ketiga metric tersebut adalah MSE, RMSE, dan MAE.
 
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
+#### **Mean Squared Error (MSE)**
+MSE dihitung dengan mencari rata-rata dari selisih kuadrat antara nilai prediksi dengan nilai aktual. Semakin kecil nilai MSE, performa model semakin baik. Rumus MSE ditampilkan sebagai berikut
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
+$$ MSE = (1/n) * Σ (y_i - p_i)^2 $$
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+dengan 
+- m = jumlah data
+- y_i = nilai aktual data ke i
+- p_i = nilai prediksi model untuk data ke i
 
+#### **Root Mean Squared Error (RMSE)**
+Secara sederhana, RMSE adalah akar kuadrat dari MSE. Sama seperti nilai MSE, semakin kecil nilai RMSE, performa model semakin baik. Berikut adalah rumus RMSE
 
+$$ RMSE = √MSE $$
+
+##### **Mean Absolute Error (MAE)**
+MAE menghitung nilai rata-rata dari selisih absolute antara nilai prediksi dengan nilai aktual. Semakin kecil nilai MAE, performa model semakin baik. Rmums MAE ditampilkan sebagai berikut
+
+$$ MAE = (1/n) * Σ |y_i - p_i| $$
+
+dengan
+- m = jumlah data
+- y_i = nilai aktual data ke i
+- p_i = nilai prediksi model untuk data ke i
+
+### Hasil Proyek
+Hasil proyek disajikan dalam format tabel sebagai berikut
+
+Tabel 6.1 Tabel Perbandingan Performa Keempat Model
+
+|Model| MSE | RMSE | MAE |
+|---|---|---|---|
+|LR|3.574985e+09|59791.180104|44888.178862|
+|KNN|3.139460e+09|56030.881730|39517.884748|
+|RF|1.857054e+09|43093.549604|28927.727758|
+|Boosting|3.904569e+09|62486.552494|47956.272228|
+|SRV|8.689392e+09|93216.907069|73541.503952|
+
+Dari tabel diatas didapati jika model Random Forest dan K-Nearest Neighbor memiliki nilai yang paling kecil dibanding model lainnya. Sehingga model Random Forest dan K-Nearest Neighbor merupakan model terbaik untuk memprediksi harga ruma dengan dataset yang digunakan.
+
+Lebih dalam lagi, nilai MSE ditampilkan pada gambar dibawah
+
+![Evaluasi-MSE](https://github.com/firman-syahrizal/PredictiveAnalytics-houseprice/assets/156873837/9264123b-2d29-4773-a376-1281fd957144)
+
+Gambar 6.1 Hasil MSE dari Kelima Model
+
+Melalui Gambar 6.1 terlihat jika model Random Forest dan KNN memiliki nilai MSE terkecil yang menandakan performanya lebih baik dibanding model lainnya. 
+
+terakhir, dilakukan juga perbandingan antara hasil prediksi dengan nilai aktual yang ditampilkan pada tabel berikut
+
+Tabel 6.2 Perbandingan Nilai Prediksi terhadap Nilai Aktual
+
+|    |y_true|LR|KNN|RF|Boosting|SVR|
+|---|---|---|---|---|---|---|
+|2757|75500.0|82489.57|78730.0|74341.49|92270.56|169510.8|
+
+Berdasarkan tabel diatas juga terlihat model Random Forest dan KNN memiliki hasil yang paling mendekati dengan nilai aktual.
+
+Dari tahap evaluasi dapat disimpulkan jika terdapat dua model yang memiliki performa baik dibanding lainnya, yaitu model Random Forest dan K-Nearest Neighbor.
+
+## Referensi
+
+[1] C. Zhan, Y. Liu, Z. Wu, M. Zhao, dan T. W. S. Chow, “A hybrid machine learning framework for forecasting house price,” Expert Systems with Applications, vol. 233. Elsevier BV, hlm. 120981, Des 2023. doi: 10.1016/j.eswa.2023.120981. 
+[2] A. Karamanou, E. Kalampokis, dan K. Tarabanis, “Linked Open Government Data to Predict and Explain House Prices: The Case of Scottish Statistics Portal,” Big Data Research, vol. 30. Elsevier BV, hlm. 100355, Nov 2022. doi: 10.1016/j.bdr.2022.100355.
+[3] T. Potrawa dan A. Tetereva, “How much is the view from the window worth? Machine learning-driven hedonic pricing model of the real estate market,” Journal of Business Research, vol. 144. Elsevier BV, hlm. 50–65, Mei 2022. doi: 10.1016/j.jbusres.2022.01.027. 
+[4] A. B. Adetunji, O. N. Akande, F. A. Ajala, O. Oyewo, Y. F. Akande, dan G. Oluwadara, “House Price Prediction using Random Forest Machine Learning Technique,” Procedia Computer Science, vol. 199. Elsevier BV, hlm. 806–813, 2022. doi: 10.1016/j.procs.2022.01.100. 
+[5] F. Mostofi, V. Toğan, dan H. B. Başağa, “Real-estate price prediction with deep neural network and principal component analysis,” Organization, Technology and Management in Construction: an International Journal, vol. 14, no. 1. Walter de Gruyter GmbH, hlm. 2741–2759, Jan 01, 2022. doi: 10.2478/otmcj-2022-0016. 
