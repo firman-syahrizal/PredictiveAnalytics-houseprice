@@ -2,31 +2,31 @@
 
 ## Domain Proyek
 
-Prediksi harga rumah memiliki peranan yang penting dalam penentuan kebijakan real estate nasional [[1](https://www.sciencedirect.com/science/article/abs/pii/S0957417423014835)]. 
+Prediksi harga rumah memiliki peranan yang penting dalam penentuan kebijakan _real estate_ nasional [[1](https://www.sciencedirect.com/science/article/abs/pii/S0957417423014835)]. 
 
 Prediksi harga rumah menjadi hal yang penting sekarang ini, terlebih bagi beberapa pemangku kepentigan seperti pemiliki rumah, agen penjualan rumah, maupun lembaga pembuat kebijakan [[2](https://www.sciencedirect.com/science/article/abs/pii/S2214579622000491)]. 
 
-Analisis pasar real estate menarik perhatian peneliti maupun praktisi [[3](https://www.sciencedirect.com/science/article/pii/S014829632200039X)].
+Analisis pasar _real estate_ menarik perhatian peneliti maupun praktisi [[3](https://www.sciencedirect.com/science/article/pii/S014829632200039X)].
 
-Seiring dengan berkembangnya teknologi, saat ini terdapat model machine learning yang dapat digunakan untuk memprediksi harga rumah. Model machine learning regresi menjadi pilihan yang tepat sebagai solusi dalam prediksi harga rumah. Harga rumah yang ditentukan oleh banyak faktor baik faktor seperti lokasi, kota, dan populasi [[4](https://www.sciencedirect.com/science/article/pii/S1877050922001016)]. 
+Seiring dengan berkembangnya teknologi, saat ini terdapat model machine learning yang dapat digunakan untuk memprediksi harga rumah. Model _machine learning_ regresi menjadi pilihan yang tepat sebagai solusi dalam prediksi harga rumah. Harga rumah yang ditentukan oleh banyak faktor baik faktor seperti lokasi, kota, dan populasi [[4](https://www.sciencedirect.com/science/article/pii/S1877050922001016)]. 
 
 Perkembangan model dalam prediksi harga rumah  dapat ditingkatkan akurasinya dengan teknik PCA [[5](https://www.researchgate.net/publication/366979465_Real-estate_price_prediction_with_deep_neural_network_and_principal_component_analysis)]. 
 
 
 ## Business Understanding
 
-Berdasar latar belakang yang ada dapat disimpulkan jika pembuatan model machine learning untuk prediksi harga rumah dapat membantu banyak pihak lebih bijak dalam mengambil keputusan. Sekarang ini, jumlah data terkait jual beli rumah sudah banyak, pemanfaatan machine learning tentunya cocok diterapkan dalam mupaya mengekstrak informasi berdasar data yang besar.
+Berdasar latar belakang yang ada dapat disimpulkan jika pembuatan model machine learning untuk prediksi harga rumah dapat membantu banyak pihak lebih bijak dalam mengambil keputusan. Sekarang ini, jumlah data terkait jual beli rumah sudah banyak, pemanfaatan _machine learning_ tentunya cocok diterapkan dalam mupaya mengekstrak informasi berdasar data yang besar.
 
 ### Problem Statements
 
 Berdasar kondisi yang telah diuraikan sebelumnya, akan dikembangkan model machine learning prediksi harga rumah dengan tujuan menyelesaikan permasalahan berikut:
 - Dari berbagai variabel independen yang ada, variabel apa yang paling berpengaruh terhadap harga (variabel dependen) ?
-- Bagaimana cara memanfaatkan dataset harga rumah untuk membuat model prediksinya menggunakan machine learning ?
+- Bagaimana cara memanfaatkan dataset harga rumah untuk membuat model prediksinya menggunakan _machine learning_ ?
 - Bagaimana cara menentukan model prediksi yang baik ?
 
 ### Goals
 
-Dibuat model predictive machine learning dengan tujuan:
+Dibuat model _predictive machine learning_ dengan tujuan:
 - Mengetahui variabel independen yang memiliki korelasi tinggi dengan variabel dependen (harga rumah).
 - Dataset yang dimodelkan dengan teknik regresi dapat digunakan untuk memprediksi harga rumah. 
 - Model machine learning akan dijui pada tahap evaluasi untuk dilihat performanya. Evaluasi dapat dilakukan dengan menggunakan beberapa metric pengujian.
@@ -34,11 +34,12 @@ Dibuat model predictive machine learning dengan tujuan:
     ### Solution statements
   Solusi yang ditawarkan adalah dengan membuat model prediksi harga rumah dengan tipe regresi karena harga tergolong dalam data kontinu.
     - Variabel independen yang memiliki korelasi tinggi dapat diketahui dengan analisis multivariat. Analisis multivariat adalah analisis yang digunakan untuk menunjukkan hubungan antara dua variabel (fitur) atau lebih. Fitur kategori dapat dilihat pengaruhnya dengan melihat korelasi antara harga rata-rata rumah terhadap masing-masing fitur. Sedangkan data numerik dapat dilihat hubungannya menggunakan fungsi fairplot() dan corr().
-    - Pembuatan model machine learning dimulai dengan memahami data, mengubah data kedalam bentuk yang dapat difahami komputer, memodelkan data menggunakan algoritma yang sesuai, dan mengevaluasi model. Terdapat lima model yang akan digunakan, Linear Regression, K-Nearest Neighbor, Random Forest, Boosting, dan Support Vector Regression.
+    - Pembuatan model _machine learning_ dimulai dengan memahami data, mengubah data kedalam bentuk yang dapat difahami komputer, memodelkan data menggunakan algoritma yang sesuai, dan mengevaluasi model. Terdapat lima model yang akan digunakan, Linear Regression, K-Nearest Neighbor, Random Forest, Boosting, dan Support Vector Regression.
     - Metric yang dapat dipakai untuk evaluasi model diantaranya MSE, MAE, dan RMSE.
 
 ## Data Understanding
 Data yang digunakan adalah data California Housing Prices yang dapat ditemukan pada laman : https://www.kaggle.com/datasets/camnugent/california-housing-prices/data .
+
 Berikut merupakan kondisi data yang digunakan:
 - Dataset merupakan data dengan format CSV.
 - Dataset terdiri dari 20640 sampel.
@@ -58,7 +59,7 @@ Berikut merupakan kondisi data yang digunakan:
 - ocen_proximity : lokasi rumah relatif terhadap laut.
 
 **Tahapan Explorasi Data**
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau _exploratory data analysis_.
 - Untuk lebih memahami data, dilakukan dua analisis data yaitu univariat analysis dan multivariat analysis.
 - Baik analisis univariat maupun multivariat keduanya dibedakan menjadi dua, fitur kategori dan numerik.
 - Penggunaan visualisasi dengan gambar dipilih karena dapat menyajikan data dalam format yang lebih informatif.
@@ -107,12 +108,12 @@ Untuk melihat besarnya korelasi antar fitur dapat digunakan *Correlation Matrix*
 
 ![Multivariate Analysis-Correlation Matrix](https://github.com/firman-syahrizal/PredictiveAnalytics-houseprice/assets/156873837/55a60830-26ab-4e76-b678-ae21e9d82e48)
 
-Gambar 3.3 Correlation Matrix Fitur Numerik
+Gambar 3.3 _Correlation Matrix_ Fitur Numerik
 
-Dengan Correlation Matrix, terlihat jika fitur *income* memiliki skor korelasi yang tinggi terhadap fitur target, *price*. Tampak juga jika fitur *population* memiliki skor korelasi yang sangat kecil terhadap fitur target. Hal ini menandakan fitur *population* memiliki korelasi yang rendah terhadap fitur target, sehingga fitur tersebut dapat di-*drop* saja.
+Dengan _Correlation Matrix_, terlihat jika fitur *income* memiliki skor korelasi yang tinggi terhadap fitur target, *price*. Tampak juga jika fitur *population* memiliki skor korelasi yang sangat kecil terhadap fitur target. Hal ini menandakan fitur *population* memiliki korelasi yang rendah terhadap fitur target, sehingga fitur tersebut dapat di-*drop* saja.
 
 ## Data Preparation
-Pada dasarnya tahapan yang dilakukan dalam membuat model machine learning adalah tahap iteratif, dimana tahapan bisa berulang ke tahap sebelumnya jika diperlukan. Salah satunya yaitu antara tahap Data Understanding dan Data Preparation. 
+Pada dasarnya tahapan yang dilakukan dalam membuat model _machine learning_ adalah tahap iteratif, dimana tahapan bisa berulang ke tahap sebelumnya jika diperlukan. Salah satunya yaitu antara tahap Data Understanding dan Data Preparation. 
 
 Terdapat dua tahapan utama dalam data preparation, *data cleaning* dan *data transformation*.
 
@@ -120,11 +121,11 @@ Tahap *data cleaning* dilakukan beriringan dengan tahap *data understanding*, se
 
 #### **Data Cleaning**: 
 
-Setelah data diimpor tahap selajutnya adalah memastikan data yang digunakan telah bersih dari data pengotor maupun data null-value. Tahap yang dilakukan yaitu :
+Setelah data diimpor tahap selajutnya adalah memastikan data yang digunakan telah bersih dari data pengotor maupun data _null-value_. Tahap yang dilakukan yaitu :
 
 1. Menagani *missing value*
 
-      Dalam data ditemukan nilai *missing value* sebanyak 207 sampel saat mengunakan fungsi isna(). Jika dibandingkan dengan jumlah sampel yang hampir 21000 maka *missing value* sebanyak 207 data bukanlah data yang banyak, sehingga apabila data ini dihapus tidak akan memberi pengaruh yang besar terhadap keseluruhan data. Pengapusan data yang terdapat *missing value* menggunakan fungsi dropna().
+      Dalam data ditemukan nilai *missing value* sebanyak 207 sampel saat mengunakan fungsi isna(). Jika dibandingkan dengan jumlah sampel sebanyak 20640 data maka *missing value* sebanyak 207 data bukanlah data yang banyak, sehingga apabila data ini dihapus tidak akan memberi pengaruh yang besar terhadap keseluruhan data. Pengapusan data yang terdapat *missing value* menggunakan fungsi dropna().
   
 2. Menangani *outlier*
   
@@ -145,7 +146,7 @@ Tahap *data preparation* (*data transformation*) merupakan tahap untuk mentransf
 Pada bagian ini akan dilakukan empat tahap persiapan data, yaitu:
 1. *Encoding* fitur kategori
    
-   Supaya data dapat diproses menggunakan metode *Machine Learning*, data yang awalnya berupa fitur kategori diubah menjadi variabel numerik dengan cara one-hot-encoding.
+   Supaya data dapat diproses menggunakan metode *Machine Learning*, data yang awalnya berupa fitur kategori diubah menjadi variabel numerik dengan cara _one-hot-encoding_.
 
 2. Reduksi dimensi dengan *Principal Component Analysis* (PCA)
 
